@@ -33,7 +33,11 @@ export default function Detalle({ libroId }: { libroId: string }) {
       </Link>
 
       <div className="detalle__cuerpo">
-        <div className="detalle__portada">
+        <div className={`detalle__portada${libro.imagen ? " detalle__portada--foto" : ""}`}>
+          {libro.imagen && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img className="libro__img" src={libro.imagen} alt={`Portada de ${libro.titulo}`} />
+          )}
           <span className="libro__genero">{libro.genero.nombre}</span>
           <span className="libro__titulo">{libro.titulo}</span>
           <span className="libro__anio">{libro.anio}</span>

@@ -16,6 +16,7 @@ export type Libro = {
   anio: number;
   stock: number;
   sinopsis: string;
+  imagen: string;
   disponible: boolean;
 };
 export type LibroPayload = {

@@ -503,3 +503,25 @@ h1 {
     .generos { flex: 1 1 100%; }
     .libro { max-width: none; }
 }
+
+/* Portadas con foto: la imagen llena el bloque y el texto se oculta
+   (queda en el alt y en el pie de la tarjeta). */
+.libro__portada--foto,
+.detalle__portada--foto {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.libro__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.libro__portada--foto > span,
+.detalle__portada--foto > span {
+    display: none;
+}
